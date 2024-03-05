@@ -4,31 +4,30 @@ end, { desc = 'Copilot Enter' })
 
 -- Harpoon
 
--- vim.keymap.set('n', '<leader>hx', require('harpoon.mark').add_file, { desc = 'Harpoon add file' })
--- vim.keymap.set('n', '<leader>h1', function()
---   require('harpoon.ui').nav_file(1)
--- end, { desc = 'Go to file 1' })
--- vim.keymap.set('n', '<leader>h2', function()
---   require('harpoon.ui').nav_file(2)
--- end, { desc = 'Go to file 2' })
--- vim.keymap.set('n', '<leader>h3', function()
---   require('harpoon.ui').nav_file(3)
--- end, { desc = 'Go to file 3' })
--- vim.keymap.set('n', '<leader>h4', function()
---   require('harpoon.ui').nav_file(4)
--- end, { desc = 'Go to file 4' })
--- vim.keymap.set('n', '<leader>h5', function()
---   require('harpoon.ui').nav_file(5)
--- end, { desc = 'Go to file 5' })
--- vim.keymap.set('n', '<leader>h6', function()
---   require('harpoon.ui').nav_file(6)
--- end, { desc = 'Go to file 6' })
---
--- vim.keymap.set('n', '<leader>hn', require('harpoon.ui').nav_next, { desc = 'Go to next file' })
--- vim.keymap.set('n', '<leader>hp', require('harpoon.ui').nav_prev, { desc = 'Go to previous file' })
--- vim.keymap.set('n', '<leader>hm', require('harpoon.ui').toggle_quick_menu, { desc = 'Harpoon menu' })
--- vim.keymap.set('n', '<leader>tm', ':Telescope harpoon marks <CR>')
---
+vim.keymap.set('n', '<leader>hx', require('harpoon.mark').add_file, { desc = 'Harpoon add file' })
+vim.keymap.set('n', '<leader>h1', function()
+  require('harpoon.ui').nav_file(1)
+end, { desc = 'Go to file 1' })
+vim.keymap.set('n', '<leader>h2', function()
+  require('harpoon.ui').nav_file(2)
+end, { desc = 'Go to file 2' })
+vim.keymap.set('n', '<leader>h3', function()
+  require('harpoon.ui').nav_file(3)
+end, { desc = 'Go to file 3' })
+vim.keymap.set('n', '<leader>h4', function()
+  require('harpoon.ui').nav_file(4)
+end, { desc = 'Go to file 4' })
+vim.keymap.set('n', '<leader>h5', function()
+  require('harpoon.ui').nav_file(5)
+end, { desc = 'Go to file 5' })
+vim.keymap.set('n', '<leader>h6', function()
+  require('harpoon.ui').nav_file(6)
+end, { desc = 'Go to file 6' })
+
+vim.keymap.set('n', '<leader>hn', require('harpoon.ui').nav_next, { desc = 'Go to next file' })
+vim.keymap.set('n', '<leader>hp', require('harpoon.ui').nav_prev, { desc = 'Go to previous file' })
+vim.keymap.set('n', '<leader>hm', require('harpoon.ui').toggle_quick_menu, { desc = 'Harpoon menu' })
+vim.keymap.set('n', '<leader>tm', ':Telescope harpoon marks <CR>')
 
 --Lazy
 vim.keymap.set('n', '<leader>ls', require('lazy').sync, { desc = 'Lazy Sync' })
@@ -52,3 +51,13 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move to top window' })
 
 vim.keymap.set('n', '<leader><Left>', ':NvimTreeResize -2<CR>', { desc = 'Resize left' })
 vim.keymap.set('n', '<leader><Right>', ':NvimTreeResize +2<CR>', { desc = 'Resize right' })
+
+--format
+
+vim.keymap.set({ 'n', 'v' }, '<leader>cf', function()
+  conform.format {
+    lsp_fallback = true,
+    async = false,
+    timeout_ms = 500,
+  }
+end, { desc = '[C]ode [F]ormat' })
