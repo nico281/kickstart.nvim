@@ -8,4 +8,5 @@ return {
   'custom.plugins.autotag',
   'github/copilot.vim',
   'nvim-tree/nvim-tree.lua',
+  'kdheepak/lazygit.nvim',
 }
