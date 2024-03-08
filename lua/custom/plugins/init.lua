@@ -9,4 +9,5 @@ return {
   'github/copilot.vim',
   'nvim-tree/nvim-tree.lua',
   'kdheepak/lazygit.nvim',
+  'stevearc/conform.nvim',
 }

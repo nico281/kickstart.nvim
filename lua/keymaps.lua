@@ -55,6 +55,7 @@ vim.keymap.set('n', '<leader><Right>', ':NvimTreeResize +2<CR>', { desc = 'Resiz
 --format
 
 vim.keymap.set({ 'n', 'v' }, '<leader>cf', function()
+  local conform = require 'conform'
   conform.format {
     lsp_fallback = true,
     async = false,
