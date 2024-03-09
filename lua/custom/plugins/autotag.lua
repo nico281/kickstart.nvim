@@ -5,4 +5,3 @@ return {
     autotag.setup {}
   end,
 }
-
