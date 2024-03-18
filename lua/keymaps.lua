@@ -33,7 +33,7 @@ vim.keymap.set('n', '<leader>tm', ':Telescope harpoon marks <CR>')
 vim.keymap.set('n', '<leader>ls', require('lazy').sync, { desc = 'Lazy Sync' })
 --LazyGit
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'Lazy git' })
-vim.keymap.set('n', '<leader>gb', ':GitBlameToggle<CR>', { desc = 'Git blame toggle' })
+vim.keymap.set('n', '<leader>gb', ':ToggleBlame virtual<CR>', { desc = 'Git blame toggle' })
 
 -- Save
 vim.keymap.set('n', 'q', ':wa<CR>', { desc = 'Save' })
@@ -62,3 +62,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>cf', function()
     timeout_ms = 500,
   }
 end, { desc = '[C]ode [F]ormat' })
+
+-- git blame
+--vim.keymap.set('n', '<leader>gb', ':EnableBlame virtual<CR>', { desc = 'Git blame toggle' })
