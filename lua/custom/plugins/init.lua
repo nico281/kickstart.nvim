@@ -5,7 +5,7 @@
 return {
   'ThePrimeagen/harpoon',
   'custom.plugins.lint',
-  'custom.plugins.autotag',
+  'windwp/nvim-ts-autotag',
   'github/copilot.vim',
   'nvim-tree/nvim-tree.lua',
   'kdheepak/lazygit.nvim',
