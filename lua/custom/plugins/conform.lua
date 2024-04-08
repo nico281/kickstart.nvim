@@ -18,9 +18,12 @@ return { -- Autoformat
       nest = { { 'prettierd', 'prettier' } },
       nextjs = { { 'prettierd', 'prettier' } },
       css = { 'prettierd' },
+      scss = { 'prettierd' },
+      tsx = { { 'prettierd', 'prettier' } },
       html = { 'prettierd' },
       json = { 'prettierd' },
       react = { { 'prettierd', 'prettier' } },
+      yaml = { { 'prettierd', 'prettier' } },
     },
   },
 }
