@@ -64,4 +64,4 @@ vim.keymap.set({ 'n', 'v' }, '<leader>cf', function()
 end, { desc = '[C]ode [F]ormat' })
 
 -- git blame
---vim.keymap.set('n', '<leader>gb', ':EnableBlame virtual<CR>', { desc = 'Git blame toggle' })
+vim.keymap.set('n', '<leader>gb', ':BlameToggle<CR>', { desc = 'Git blame toggle' })
