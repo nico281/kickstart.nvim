@@ -58,7 +58,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>cf', function()
   local conform = require 'conform'
   conform.format {
     lsp_fallback = true,
-    async = false,
+    async = true,
     timeout_ms = 500,
   }
 end, { desc = '[C]ode [F]ormat' })
