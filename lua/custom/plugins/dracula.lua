@@ -1,3 +1,3 @@
 return {
-  { 'Mofiqul/dracula.nvim' },
+  { 'Mofiqul/dracula.nvim', lazy = false, opts = { transparent_bg = true } },
 }
