@@ -509,6 +509,8 @@ require('lazy').setup {
               buffer = event.buf,
               callback = vim.lsp.buf.document_highlight,
             })
+            local navic = require 'nvim-navic'
+            navic.attach(client, event.buf)
 
             vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
               buffer = event.buf,
