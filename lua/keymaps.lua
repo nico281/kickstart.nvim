@@ -65,3 +65,6 @@ end, { desc = '[C]ode [F]ormat' })
 
 -- git blame
 vim.keymap.set('n', '<leader>gb', ':BlameToggle<CR>', { desc = 'Git blame toggle' })
+
+-- oil
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
