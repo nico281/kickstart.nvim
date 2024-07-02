@@ -1,5 +1,5 @@
 return {
-  'feline-nvim/feline.nvim',
+  'freddiehaddad/feline.nvim',
   config = function()
     require('feline').setup()
     require('feline').winbar.setup()
